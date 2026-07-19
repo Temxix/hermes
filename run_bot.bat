@@ -5,6 +5,7 @@ echo.
 
 set TERMINAL_CWD=
 set MESSAGING_CWD=
+set HERMES_TELEGRAM_DISABLE_FALLBACK_IPS=1
 
 cd /d "%~dp0hermes_source_code\hermes-agent-main"
 
