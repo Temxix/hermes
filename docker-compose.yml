@@ -14,16 +14,13 @@ services:
       - .env
     environment:
       - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
     volumes:
       # Mount persistent memory and configuration
       - hermes-data:/root/.hermes
       - ./data:/opt/data
     ports:
       - "8642:8642"
-    # Default entrypoint/command
-    # To run setup wizard interactively: docker compose run --rm hermes setup
-    # To run CLI: docker compose run --rm hermes
-    # To run gateway 24/7 background: docker compose up -d
 
 volumes:
   hermes-data:
